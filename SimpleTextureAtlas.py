@@ -81,7 +81,12 @@ def pack_images(images, atlas_width, atlas_height):
     
     return offsets
 
-def make_atlas(images, atlas_width=1, atlas_height=1):
+def make_atlas(
+    images,
+    atlas_width=1,
+    atlas_height=1,
+    background_color=(0,0,0,0)
+):
     # While images don't fit into atlas, increase atlas size.
     while True:
         try:
@@ -93,7 +98,7 @@ def make_atlas(images, atlas_width=1, atlas_height=1):
             else:
                 atlas_height *= 2
 
-    atlas = Image.new('RGBA', (atlas_width, atlas_height), (0, 0, 0, 0))
+    atlas = Image.new('RGBA', (atlas_width, atlas_height), background_color)
 
     for (x, y), image in zip(offsets, images):
         atlas.paste(image, (x, y))
