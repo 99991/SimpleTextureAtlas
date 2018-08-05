@@ -3,7 +3,7 @@
 ## Short example:
 
 ```python
-from make_atlas import make_atlas
+from SimpleTextureAtlas import make_atlas
 images = #TODO
 atlas, offsets = make_atlas(images)
 ```
@@ -16,7 +16,7 @@ atlas, offsets = make_atlas(images)
 In this example, images are loaded from a directory, optionally cropped and padded, and placed in an atlas image.
 
 ```python
-from make_atlas import make_atlas
+from SimpleTextureAtlas import make_atlas
 from PIL import Image
 import os
 

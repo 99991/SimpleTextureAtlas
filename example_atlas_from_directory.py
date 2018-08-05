@@ -1,4 +1,4 @@
-from make_atlas import make_atlas
+from SimpleTextureAtlas import make_atlas
 from PIL import Image
 import os
 
